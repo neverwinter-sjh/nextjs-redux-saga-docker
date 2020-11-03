@@ -1,5 +1,5 @@
 import { HYDRATE } from 'next-redux-wrapper';
-import { all, fork } from 'redux-saga/effects';
+import { counter } from 'src/store/initialState';
 
 /*
  * Constant
@@ -14,28 +14,9 @@ export const increase = () => ({ type: INCREASE });
 export const decrease = () => ({ type: DECREASE });
 
 /*
- * Saga Actions
- */
-
-/*
- * rootSaga
- */
-export function* saga() {
-  //yield all([fork()]);
-  yield console.log('Saga loaded');
-}
-
-/*
- * initialState
- */
-export const initialState = {
-  value: 0
-};
-
-/*
  * reducer
  */
-export const reducer = (state = initialState, action) => {
+const reducer = (state = counter, action) => {
   switch (action.type) {
     case HYDRATE:
       return {
@@ -59,3 +40,5 @@ export const reducer = (state = initialState, action) => {
       return { ...state };
   }
 };
+
+export default reducer;

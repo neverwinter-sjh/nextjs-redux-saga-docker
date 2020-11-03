@@ -1,7 +1,7 @@
 import React from 'react';
 import CounterContainer from 'src/containers/CounterContainer';
-import wrapper from 'src/reducers';
-import { INCREASE } from 'src/reducers/store';
+import wrapper from 'src/store/index';
+import { INCREASE } from 'src/reducers/counter';
 
 const Index = () => {
   return (

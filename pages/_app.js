@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import wrapper from 'src/reducers';
+import wrapper from 'src/store/index';
 import withReduxSaga from 'src/utils/WithReduxSaga';
 
 class _App extends App {
