@@ -11,8 +11,8 @@ class _App extends App {
         ...(Component.getInitialProps
           ? await Component.getInitialProps(ctx)
           : {}),
-        pathname: ctx.pathname,
-      },
+        pathname: ctx.pathname
+      }
     };
   }
 

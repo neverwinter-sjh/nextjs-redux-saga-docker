@@ -17,8 +17,4 @@ const CounterContainer = () => {
   );
 };
 
-CounterContainer.getInitialProps = ({ store }) => {
-  return {};
-};
-
 export default CounterContainer;

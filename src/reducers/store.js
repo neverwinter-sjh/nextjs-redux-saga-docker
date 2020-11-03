@@ -29,7 +29,7 @@ export function* saga() {
  * initialState
  */
 export const initialState = {
-  value: 0,
+  value: 0
 };
 
 /*
@@ -40,19 +40,19 @@ export const reducer = (state = initialState, action) => {
     case HYDRATE:
       return {
         ...state,
-        ...action.payload,
+        ...action.payload
       };
 
     case INCREASE:
       return {
         ...state,
-        value: state.value + 1,
+        value: state.value + 1
       };
 
     case DECREASE:
       return {
         ...state,
-        value: state.value - 1,
+        value: state.value - 1
       };
 
     default:
