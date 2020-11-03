@@ -1,8 +1,8 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import wrapper from '../src/reducers';
-import withReduxSaga from '../src/utils/WithReduxSaga';
+import wrapper from 'src/reducers';
+import withReduxSaga from 'src/utils/WithReduxSaga';
 
 class _App extends App {
   static async getInitialProps({ Component, ctx }) {
