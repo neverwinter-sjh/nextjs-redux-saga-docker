@@ -21,7 +21,8 @@ export const decrease = () => ({ type: DECREASE });
  * rootSaga
  */
 export function* saga() {
-  yield all([fork()]);
+  //yield all([fork()]);
+  yield console.log('Saga loaded');
 }
 
 /*

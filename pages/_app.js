@@ -2,6 +2,7 @@ import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
 import wrapper from '../src/reducers';
+import withReduxSaga from '../src/utils/WithReduxSaga';
 
 class _App extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -41,4 +42,4 @@ class _App extends App {
   }
 }
 
-export default wrapper.withRedux(_App);
+export default wrapper.withRedux(withReduxSaga(_App));
