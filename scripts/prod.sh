@@ -1,1 +1,1 @@
-docker build -t twd-front-mobile .
+docker build -t nextjs-redux-saga .

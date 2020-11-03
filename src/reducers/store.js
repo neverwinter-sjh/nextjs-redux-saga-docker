@@ -1,4 +1,10 @@
 import { HYDRATE } from 'next-redux-wrapper';
+import { all, fork } from 'redux-saga/effects';
+import watchExampleSagas from './exampleSagas';
+
+export function* rootSaga() {
+  yield all([fork(watchExampleSagas)]);
+}
 
 export const INCREASE = 'INCREASE';
 export const DECREASE = 'DECREASE';
@@ -10,7 +16,7 @@ export const initialState = {
   value: 0,
 };
 
-export const counter = (state = initialState, action) => {
+export const stateStore = (state = initialState, action) => {
   switch (action.type) {
     case HYDRATE:
       return {
