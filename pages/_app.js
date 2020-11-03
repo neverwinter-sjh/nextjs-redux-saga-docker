@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import wrapper from 'src/reducers';
+import wrapper from 'src/store/index';
 import withReduxSaga from 'src/utils/WithReduxSaga';
 
 class _App extends App {
@@ -16,12 +16,7 @@ class _App extends App {
     };
   }
 
-  componentDidMount() {
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
-      jssStyles.parentNode.removeChild(jssStyles);
-    }
-  }
+  componentDidMount() {}
 
   render() {
     const { Component, pageProps } = this.props;
