@@ -16,12 +16,7 @@ class _App extends App {
     };
   }
 
-  componentDidMount() {
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
-      jssStyles.parentNode.removeChild(jssStyles);
-    }
-  }
+  componentDidMount() {}
 
   render() {
     const { Component, pageProps } = this.props;

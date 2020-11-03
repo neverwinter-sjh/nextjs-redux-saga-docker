@@ -19,10 +19,15 @@ export const decrease = () => ({ type: DECREASE });
 const reducer = (state = counter, action) => {
   switch (action.type) {
     case HYDRATE:
-      return {
+      const nextState = {
         ...state,
         ...action.payload
       };
+      if (action.payload.counter) {
+        nextState.value = action.payload.counter.value;
+        delete nextState.counter;
+      }
+      return nextState;
 
     case INCREASE:
       return {
