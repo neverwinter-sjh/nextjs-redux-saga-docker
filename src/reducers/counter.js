@@ -24,6 +24,7 @@ const reducer = (state = counter, action) => {
         ...action.payload
       };
       if (action.payload.counter) {
+        console.log(action.payload);
         nextState.value = action.payload.counter.value;
         delete nextState.counter;
       }
