@@ -1,7 +1,7 @@
 import React from 'react';
 import withReduxSaga from 'src/utils/withReduxSaga';
 import CounterContainer from 'src/components/counter/CounterContainer';
-import { INCREASE_ASYNC } from 'src/redux/counter';
+import { INCREASE_ASYNC } from 'src/redux/stores/counter';
 
 const Index = (props) => {
   return (
@@ -15,16 +15,17 @@ const Index = (props) => {
   );
 };
 
-Index.getInitialProps = async (props) => {
-  const { store, isServer } = props.ctx;
+export async function getStaticProps({ store, isServer }) {
   store.dispatch({
     type: INCREASE_ASYNC
   });
 
   return {
-    isServer,
-    value: 'Props로 전달되어온 3'
+    props: {
+      isServer,
+      value: 'Props로 전달되어온 3'
+    }
   };
-};
+}
 
 export default withReduxSaga(Index);
