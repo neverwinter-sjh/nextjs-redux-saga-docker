@@ -16,7 +16,6 @@ const Index = (props) => {
 };
 
 Index.getInitialProps = async (props) => {
-  console.log(process.env);
   const { store, isServer } = props.ctx;
   store.dispatch({
     type: INCREASE_ASYNC
