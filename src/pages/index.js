@@ -1,5 +1,4 @@
 import React from 'react';
-import withReduxSaga from 'src/utils/withReduxSaga';
 import CounterContainer from 'src/components/counter/CounterContainer';
 import { INCREASE_ASYNC } from 'src/redux/stores/counter';
 
@@ -27,4 +26,4 @@ Index.getInitialProps = async (props) => {
   };
 };
 
-export default withReduxSaga(Index);
+export default Index;
