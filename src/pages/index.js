@@ -15,17 +15,16 @@ const Index = (props) => {
   );
 };
 
-export async function getStaticProps({ store, isServer }) {
+Index.getInitialProps = async (props) => {
+  const { store, isServer } = props.ctx;
   store.dispatch({
     type: INCREASE_ASYNC
   });
 
   return {
-    props: {
-      isServer,
-      value: 'Props로 전달되어온 3'
-    }
+    isServer,
+    value: 'Props로 전달되어온 3'
   };
-}
+};
 
 export default withReduxSaga(Index);
