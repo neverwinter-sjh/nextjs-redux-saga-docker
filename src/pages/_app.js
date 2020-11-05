@@ -1,6 +1,7 @@
 import App from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'src/utils/withReduxSaga';
 import createStore from 'src/redux/configureStore';
 import Layout from 'src/components/layout/index';
 
@@ -29,4 +30,4 @@ class MyApp extends App {
   }
 }
 
-export default withRedux(createStore)(MyApp);
+export default withRedux(createStore)(withReduxSaga(MyApp));
