@@ -3,6 +3,7 @@ import withRedux from 'next-redux-wrapper';
 import withReduxSaga from 'src/utils/withReduxSaga';
 import createStore from 'src/redux/configureStore';
 import Layout from 'src/components/layout/index';
+import withAppInsights from 'src/utils/AppInsights';
 
 const App = ({ Component, pageProps, store }) => {
   return (
@@ -32,4 +33,4 @@ App.getInitialProps = async ({ Component, ctx }) => {
   };
 };
 
-export default withRedux(createStore)(withReduxSaga(App));
+export default withRedux(createStore)(withReduxSaga(withAppInsights(App)));
