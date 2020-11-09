@@ -14,6 +14,14 @@ const App = ({ Component, pageProps, store }) => {
   );
 };
 
+/*
+ * WebVital 리포트
+ * @params {}
+ */
+export function reportWebVitals(metric) {
+  console.log(metric);
+}
+
 App.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = {};
 
