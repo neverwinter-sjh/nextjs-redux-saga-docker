@@ -2,6 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 const About = ({ isServer, value }) => {
+  const link = () => {
+    window.location.href = 'http://www.naver.com';
+  };
+
   return (
     <div>
       <p>
@@ -24,6 +28,12 @@ const About = ({ isServer, value }) => {
       <p>from server: {isServer ? 'true' : 'false'}</p>
       <p>{value}</p>
       <p>process.env.CUSTOM_KEY: {process.env.CUSTOM_KEY}</p>
+      <hr />
+      <p>
+        <button type="button" onClick={link}>
+          주문 완료
+        </button>
+      </p>
     </div>
   );
 };

@@ -13,4 +13,4 @@ const Counter = ({ number, onIncrease, onDecrease, onIncreaseAsync, onDecreaseAs
   );
 };
 
-export default Counter;
+export default React.memo(Counter);

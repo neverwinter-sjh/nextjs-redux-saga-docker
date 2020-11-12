@@ -22,11 +22,11 @@ const TestHooks = () => {
   });
 
   const handlerTest = useCallback(() => {
-    setTest(test + 1);
+    setTest(test => test + 1);
   }, [test]);
 
   const handlerTest2 = useCallback(() => {
-    setTest2(test2 - 1);
+    setTest2(test2 => test2 - 1);
   }, [test2]);
 
   return (

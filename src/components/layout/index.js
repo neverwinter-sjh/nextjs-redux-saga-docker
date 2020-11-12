@@ -8,7 +8,6 @@ function Layout({ children }) {
         <meta charSet="utf-8" />
         <meta name="msapplication-TileColor" content="#00df94" />
         <meta name="theme-color" content="#00df94" />
-        <link rel="stylesheet" type="text/css" href="../../../static/styles.css" />
         <title>Next/Redux/Saga Boilerplate</title>
       </Head>
       {children}
